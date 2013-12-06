@@ -107,6 +107,7 @@ class Chef
 
           # Mount the logical volume
           mount_resource = mount mount_spec[:location] do
+            ignore_failure true
             options mount_spec[:options]
             dump mount_spec[:dump]
             pass mount_spec[:pass]
